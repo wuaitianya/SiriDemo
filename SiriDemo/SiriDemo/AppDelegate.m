@@ -14,7 +14,7 @@
 
 @implementation AppDelegate
 
-
+#ifdef __IPHONE_12_0
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler
 {
     // activityType 和 Info.plist中的NSUserActivityTypes内容对应
@@ -23,7 +23,7 @@
     }
     return YES;
 }
-
+#endif
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
